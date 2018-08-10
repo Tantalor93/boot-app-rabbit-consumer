@@ -17,7 +17,8 @@ public class FeedbackConsumerService {
     }
 
     public Feedback consumeFromQueue() {
-        System.out.println(queue);
-        return (Feedback) rabbitTemplate.receiveAndConvert(queue.getName());
+        final Object o = rabbitTemplate.receiveAndConvert(queue.getName());
+        if (o == null) return null;
+        return (Feedback) o;
     }
 }

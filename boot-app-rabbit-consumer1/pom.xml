@@ -43,7 +43,7 @@
 
 
     <properties>
-        <docker.image.prefix>com.github.tantalor93</docker.image.prefix>
+        <docker.image.prefix>tantalor93</docker.image.prefix>
     </properties>
 
     <build>
